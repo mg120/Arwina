@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_card_background"
+    android:layout_margin="25dp"
+    android:layout_gravity="center"
+    android:padding="12dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/order_state"
+        android:layout_marginStart="30dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/orderState_txtV"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_state"
+        android:textStyle="bold"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="18dp"
+        android:id="@+id/orderState_val_txtV"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toEndOf="@id/orderState_txtV"
+        app:layout_constraintTop_toTopOf="@id/orderState_txtV" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/orderState_txtV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@string/in_process"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_margin="4dp"
+            android:background="@drawable/buttons_bg"
+            android:id="@+id/order_inProcess_btn_id"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@string/in_way"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_margin="4dp"
+            android:background="@drawable/buttons_bg"
+            android:id="@+id/order_inWay_btn_id"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@string/completed"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_margin="4dp"
+            android:background="@drawable/buttons_bg"
+            android:id="@+id/order_completed_btn_id"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

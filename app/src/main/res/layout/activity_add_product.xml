@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_color"
+    tools:context=".activities.AddProductActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addProduct_app_bar_layout"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:background="@drawable/bg_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/addProduct_user_imageV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_person_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addProduct_back_txtV_id" />
+
+        <ImageView
+            android:id="@+id/addProduct_notifications_imageV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/ic_notifications_black_24dp"
+            app:layout_constraintStart_toEndOf="@+id/addProduct_back_txtV_id"
+            app:layout_constraintTop_toTopOf="@+id/addProduct_back_txtV_id" />
+
+        <ImageView
+            android:id="@+id/addProduct_back_txtV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_margin="12dp"
+            android:background="@drawable/ic_chevron_right_black_24dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/add_product"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/addProduct_back_txtV_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addProduct_back_txtV_id" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toBottomOf="@+id/addProduct_app_bar_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:paddingBottom="12dp">
+            <EditText
+                android:id="@+id/product_name_ed_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_ed_bg"
+                android:hint="@string/product_name"
+                android:inputType="text"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/product_price_ed_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_ed_bg"
+                android:hint="@string/price"
+                android:inputType="numberSigned"
+                android:padding="12dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_name_ed_id" />
+
+            <EditText
+                android:id="@+id/product_quantity_ed_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_ed_bg"
+                android:hint="@string/quantity"
+                android:inputType="numberSigned"
+                android:padding="12dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_price_ed_id" />
+
+            <EditText
+                android:id="@+id/product_maxQuantity_ed_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_ed_bg"
+                android:hint="@string/max_quantity"
+                android:inputType="numberSigned"
+                android:padding="12dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_quantity_ed_id" />
+
+            <EditText
+                android:id="@+id/product_completeDesc_ed_id"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:background="@drawable/login_ed_bg"
+                android:hint="@string/complete_desc"
+                android:inputType="text|textMultiLine"
+                android:padding="12dp"
+                android:gravity="top"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_maxQuantity_ed_id" />
+
+            <LinearLayout
+                android:id="@+id/product_address_layout_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/login_ed_bg"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_completeDesc_ed_id">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:id="@+id/product_address_txtV_id"
+                    android:text="@string/address" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/map2"
+                    android:padding="3dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/product_upload_imageV_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_ed_bg"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_address_layout_id">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:id="@+id/product_iamge_txtV_id"
+                    android:text="@string/product_image" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/image"
+                    android:padding="4dp"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_product_btn_id"
+                android:text="@string/add_now"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:background="@drawable/buttons_bg"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_upload_imageV_id"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

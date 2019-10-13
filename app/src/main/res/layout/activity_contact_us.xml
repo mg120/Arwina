@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activities.ContactUsActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contactUs_app_bar_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp">
+
+            <Button
+                android:id="@+id/send_message_btn_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/buttons_bg"
+                android:text="@string/send_now"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contactUs_message_ed_id" />
+
+            <EditText
+                android:id="@+id/contactUs_phone_ed_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_ed_bg"
+                android:gravity="right"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contactUs_name_ed_id" />
+
+            <EditText
+                android:id="@+id/contactUs_message_ed_id"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_ed_bg"
+                android:gravity="right"
+                android:hint="@string/message"
+                android:inputType="text|textMultiLine"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contactUs_phone_ed_id" />
+
+            <EditText
+                android:id="@+id/contactUs_name_ed_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/login_ed_bg"
+                android:gravity="right"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:id="@+id/contactUs_app_bar_layout"
+        android:background="@drawable/bg_top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <ImageView
+            android:id="@+id/contactUs_user_imageV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/ic_person_black_24dp"
+            app:layout_constraintTop_toTopOf="@+id/contactUs_back_txtV_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/contactUs_notifications_imageV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            app:layout_constraintTop_toTopOf="@+id/contactUs_back_txtV_id"
+            app:layout_constraintStart_toEndOf="@+id/contactUs_back_txtV_id"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/ic_notifications_black_24dp" />
+
+        <ImageView
+            android:id="@+id/contactUs_back_txtV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/ic_chevron_right_black_24dp"
+            android:scaleType="fitXY"
+            android:layout_margin="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/contact_us"
+            android:textColor="@android:color/white"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/contactUs_back_txtV_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/contactUs_back_txtV_id"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

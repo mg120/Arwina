@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_color"
+    tools:context=".activities.ProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_app_bar_layout"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:background="@drawable/bg_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profile_notifications_imageV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/ic_notifications_black_24dp"
+            app:layout_constraintStart_toEndOf="@+id/profile_back_txtV_id"
+            app:layout_constraintTop_toTopOf="@+id/profile_back_txtV_id" />
+
+        <ImageView
+            android:id="@+id/profile_back_txtV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_margin="12dp"
+            android:background="@drawable/ic_chevron_right_black_24dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_user_imageV_id"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/login"
+            app:layout_constraintBottom_toBottomOf="@id/profile_app_bar_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/profile_name_txtV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxLines="1"
+            android:text="@string/name"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/profile_back_txtV_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/profile_back_txtV_id" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_app_bar_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_wallet_cardLayout_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_card_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_products_cardLayout_id">
+
+            <ImageView
+                android:id="@+id/profile_wallet_imageV_id"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/buttons_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/money"
+                app:layout_constraintStart_toStartOf="@id/profile_wallet_imageV_id"
+                app:layout_constraintEnd_toEndOf="@id/profile_wallet_imageV_id"
+                app:layout_constraintTop_toTopOf="@id/profile_wallet_imageV_id"
+                app:layout_constraintBottom_toBottomOf="@id/profile_wallet_imageV_id" />
+
+            <TextView
+                android:id="@+id/profile_wallet_txtV_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="2"
+                android:text="@string/wallet"
+                android:textColor="@android:color/black"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profile_wallet_imageV_id"
+                app:layout_constraintTop_toTopOf="@id/profile_wallet_imageV_id" />
+
+            <TextView
+                android:id="@+id/profile_wallet_val_txtV_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxLines="2"
+                android:text="@string/account"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/profile_wallet_txtV_id"
+                app:layout_constraintTop_toBottomOf="@id/profile_wallet_txtV_id" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/editProfile_cardLayout_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_card_background"
+            app:layout_constraintTop_toBottomOf="@id/profile_wallet_cardLayout_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/profile_update_imageV_id"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/buttons_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/edit_profile"
+                app:layout_constraintStart_toStartOf="@id/profile_update_imageV_id"
+                app:layout_constraintEnd_toEndOf="@id/profile_update_imageV_id"
+                app:layout_constraintTop_toTopOf="@id/profile_update_imageV_id"
+                app:layout_constraintBottom_toBottomOf="@id/profile_update_imageV_id" />
+
+            <TextView
+                android:id="@+id/profile_update_txtV_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="2"
+                android:text="@string/update_profile"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profile_update_imageV_id"
+                app:layout_constraintTop_toTopOf="@id/profile_update_imageV_id" />
+
+            <TextView
+                android:id="@+id/profile_update_val_txtV_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxLines="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/profile_update_txtV_id"
+                app:layout_constraintTop_toBottomOf="@id/profile_update_txtV_id" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_orders_cardLayout_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_card_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/profile_orders_imageV_id"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/buttons_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/orders"
+                app:layout_constraintStart_toStartOf="@id/profile_orders_imageV_id"
+                app:layout_constraintEnd_toEndOf="@id/profile_orders_imageV_id"
+                app:layout_constraintTop_toTopOf="@id/profile_orders_imageV_id"
+                app:layout_constraintBottom_toBottomOf="@id/profile_orders_imageV_id" />
+
+            <TextView
+                android:id="@+id/profile_orders_txtV_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="2"
+                android:text="@string/orders"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profile_orders_imageV_id"
+                app:layout_constraintTop_toTopOf="@id/profile_orders_imageV_id" />
+
+            <TextView
+                android:id="@+id/profile_orders_val_txtV_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxLines="2"
+                android:text="@string/you_have_km_order"
+                app:layout_constraintStart_toStartOf="@id/profile_orders_txtV_id"
+                app:layout_constraintTop_toBottomOf="@id/profile_orders_txtV_id" />
+
+            <TextView
+                android:id="@+id/profile_ordersNum_val_txtV_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="20"
+                app:layout_constraintStart_toEndOf="@id/profile_orders_val_txtV_id"
+                app:layout_constraintTop_toTopOf="@id/profile_orders_val_txtV_id" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_products_cardLayout_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_card_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_orders_cardLayout_id">
+
+            <ImageView
+                android:id="@+id/profile_products_imageV_id"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/buttons_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/products"
+                app:layout_constraintStart_toStartOf="@id/profile_products_imageV_id"
+                app:layout_constraintEnd_toEndOf="@id/profile_products_imageV_id"
+                app:layout_constraintTop_toTopOf="@id/profile_products_imageV_id"
+                app:layout_constraintBottom_toBottomOf="@id/profile_products_imageV_id" />
+
+            <TextView
+                android:id="@+id/profile_products_txtV_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="2"
+                android:text="@string/products"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profile_products_imageV_id"
+                app:layout_constraintTop_toTopOf="@id/profile_products_imageV_id" />
+
+            <TextView
+                android:id="@+id/profile_products_val_txtV_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxLines="2"
+                android:text="@string/add_new_product"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/profile_products_txtV_id"
+                app:layout_constraintTop_toBottomOf="@id/profile_products_txtV_id" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

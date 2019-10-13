@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:elevation="4dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/product_row_imageV_id"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/product_name_txtV_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:maxLines="2"
+            android:text="الشركة المتحدة للمياة"
+            android:ellipsize="end"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/product_row_imageV_id"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/product_price_txtV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:text="100"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="@id/product_name_txtV_id"
+            app:layout_constraintTop_toBottomOf="@id/product_name_txtV_id" />
+
+        <TextView
+            android:id="@+id/pricte_curreny_txtV_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="ريال"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/product_price_txtV_id"
+            app:layout_constraintTop_toTopOf="@id/product_price_txtV_id" />
+
+        <TextView
+            android:id="@+id/product_content_txtV_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginTop="10dp"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="@id/product_name_txtV_id"
+            app:layout_constraintTop_toBottomOf="@id/product_price_txtV_id" />
+
+        <TextView
+            android:id="@+id/content_txtV_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginStart="3dp"
+            android:text="@string/packag"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/product_content_txtV_id"
+            app:layout_constraintTop_toTopOf="@id/product_content_txtV_id" />
+
+        <TextView
+            android:id="@+id/maxContent_txtV_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginStart="15dp"
+            android:text="@string/max_quant"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/content_txtV_id"
+            app:layout_constraintTop_toTopOf="@id/product_content_txtV_id" />
+
+        <TextView
+            android:id="@+id/product_maxContent_txtV_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginStart="3dp"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/maxContent_txtV_id"
+            app:layout_constraintTop_toTopOf="@id/product_content_txtV_id" />
+
+        <ProgressBar
+            android:id="@+id/product_image_progress_id"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="@dimen/activity_margin"
+            android:layout_height="@dimen/activity_margin"
+            android:theme="@style/CircularProgress"
+            app:layout_constraintBottom_toBottomOf="@id/product_row_imageV_id"
+            app:layout_constraintEnd_toEndOf="@id/product_row_imageV_id"
+            app:layout_constraintStart_toStartOf="@id/product_row_imageV_id"
+            app:layout_constraintTop_toTopOf="@id/product_row_imageV_id" />
+
+        <Button
+            android:layout_width = "70dp"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/colorPrimary"
+            android:id = "@+id/product_order_btn_id"
+            android:text = "@string/order"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="@id/product_price_txtV_id"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/money"
+            android:title="@string/payment" />
+        <item
+            android:id="@+id/nav_aboutApp"
+            android:icon="@drawable/about"
+            android:title="@string/about_app" />
+        <item
+            android:id="@+id/nav_termsAndConditions"
+            android:icon="@drawable/rolls"
+            android:title="@string/terms" />
+        <item
+            android:id="@+id/nav_privacyPolicy"
+            android:icon="@drawable/seyasa"
+            android:title="@string/privacy_policy" />
+        <item
+            android:id="@+id/nav_contactUs"
+            android:icon="@drawable/contactus"
+            android:title="@string/contact_us" />
+        <item
+            android:id="@+id/nav_aboutUs"
+            android:icon="@drawable/about"
+            android:title="@string/about_us" />
+        <item
+            android:id="@+id/nav_shareApp"
+            android:icon="@drawable/share"
+            android:title="@string/share_app" />
+        <item
+            android:id="@+id/nav_logOut"
+            android:icon="@drawable/logout"
+            android:title="@string/logOut" />
+    </group>
+</menu>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1E92CD</color>
+    <color name="colorPrimaryDark">#1E92CD</color>
+    <color name="colorAccent">#1E92CD</color>
+
+    <color name="main_bg_color">#F7F7F7</color>
+    <color name="duskYellow">#FFF77A</color>
+    <color name="lightGrey">#D4AF37</color>
+
+    <color name="code_txt_color">#0032f0</color>
+
+    <color name="refresh_progress_1">#FF0266</color>
+    <color name="refresh_progress_2">#0336ff</color>
+    <color name="refresh_progress_3">#FFDE03</color>
+
+    <color name="colorGray">#807D7D</color>
+    <color name="tab_background_selected">#1E92CD</color>
+    <color name="tab_background_unselected">#ffffff</color>
+</resources>

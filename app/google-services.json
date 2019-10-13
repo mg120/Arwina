@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "24924566174",
+    "firebase_url": "https://arwina-ee948.firebaseio.com",
+    "project_id": "arwina-ee948",
+    "storage_bucket": "arwina-ee948.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24924566174:android:6d06342f9bbed5de2d418f",
+        "android_client_info": {
+          "package_name": "com.tamiuz.arwina"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24924566174-coar00fici5jmh0ie806p6ajlf50aer3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tamiuz.arwina",
+            "certificate_hash": "968bbfc662231c2715b4faed11321feb21b9c9ff"
+          }
+        },
+        {
+          "client_id": "24924566174-iv76i2t2nsjiueo2in5fhdq2hcl8kq7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtXbHw6doUUnvUI64LF26jAO5_J0r4BTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24924566174-iv76i2t2nsjiueo2in5fhdq2hcl8kq7r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
